@@ -1,0 +1,765 @@
+```css
+/* =========================================================
+   EKITI STATE WOMEN OF INFLUENCE
+   ADO LOCAL GOVERNMENT
+   MAIN STYLESHEET
+========================================================= */
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f8fc;
+    color: #1f2937;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 16px 6%;
+
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo > span {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: #7c3aed;
+    color: white;
+
+    font-weight: 800;
+    font-size: 14px;
+}
+
+.logo h1 {
+    font-size: 18px;
+    line-height: 1.2;
+    color: #111827;
+}
+
+.logo p {
+    font-size: 12px;
+    color: #6b7280;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+nav a {
+    font-size: 14px;
+    font-weight: 600;
+    color: #374151;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #7c3aed;
+}
+
+.menu-btn {
+    display: none;
+
+    border: none;
+    background: transparent;
+
+    font-size: 26px;
+    cursor: pointer;
+
+    color: #111827;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    min-height: 620px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 80px 6%;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(88, 28, 135, 0.96),
+            rgba(124, 58, 237, 0.90)
+        );
+    
+    color: white;
+}
+
+.hero-content {
+    max-width: 720px;
+}
+
+.badge {
+    display: inline-block;
+
+    margin-bottom: 20px;
+    padding: 8px 14px;
+
+    border: 1px solid rgba(255,255,255,0.35);
+    border-radius: 999px;
+
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.hero h2 {
+    font-size: clamp(42px, 7vw, 78px);
+    line-height: 1.05;
+
+    margin-bottom: 25px;
+}
+
+.hero p:not(.badge) {
+    max-width: 600px;
+
+    font-size: 18px;
+    color: rgba(255,255,255,0.9);
+
+    margin-bottom: 32px;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 13px 22px;
+
+    border-radius: 10px;
+
+    border: none;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s,
+        background 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn.primary {
+    background: #7c3aed;
+    color: white;
+}
+
+.btn.primary:hover {
+    background: #6d28d9;
+    box-shadow: 0 8px 20px rgba(124,58,237,0.25);
+}
+
+.hero .btn.primary {
+    background: white;
+    color: #6d28d9;
+}
+
+.hero .btn.primary:hover {
+    background: #f3f4f6;
+}
+
+.btn.secondary {
+    background: rgba(255,255,255,0.12);
+    color: white;
+
+    border: 1px solid rgba(255,255,255,0.4);
+}
+
+.btn.secondary:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+
+/* =========================================================
+   STATISTICS
+========================================================= */
+
+.stats {
+    width: 88%;
+    max-width: 1100px;
+
+    margin: -55px auto 70px;
+
+    position: relative;
+    z-index: 5;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    background: white;
+
+    border-radius: 18px;
+
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+
+    overflow: hidden;
+}
+
+.stat-card {
+    padding: 30px;
+
+    text-align: center;
+
+    border-right: 1px solid #e5e7eb;
+}
+
+.stat-card:last-child {
+    border-right: none;
+}
+
+.stat-card strong {
+    display: block;
+
+    font-size: 36px;
+
+    color: #7c3aed;
+}
+
+.stat-card span {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   GENERAL SECTIONS
+========================================================= */
+
+.section {
+    width: 88%;
+    max-width: 1150px;
+
+    margin: 0 auto 90px;
+}
+
+.section-heading {
+    max-width: 700px;
+
+    margin: 0 auto 45px;
+
+    text-align: center;
+}
+
+.section-label {
+    margin-bottom: 8px;
+
+    color: #7c3aed;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+.section-heading h2 {
+    margin-bottom: 12px;
+
+    font-size: clamp(30px, 5vw, 46px);
+
+    color: #111827;
+}
+
+.section-heading p:last-child {
+    color: #6b7280;
+}
+
+
+/* =========================================================
+   WARD GRID
+========================================================= */
+
+.ward-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+.ward-card {
+    padding: 26px 20px;
+
+    background: white;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 16px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s,
+        box-shadow 0.25s,
+        border-color 0.25s;
+}
+
+.ward-card:hover {
+    transform: translateY(-5px);
+
+    border-color: #a78bfa;
+
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+.ward-number {
+    display: inline-flex;
+
+    width: 42px;
+    height: 42px;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 15px;
+
+    border-radius: 50%;
+
+    background: #ede9fe;
+
+    color: #6d28d9;
+
+    font-weight: 800;
+}
+
+.ward-card h3 {
+    margin-bottom: 5px;
+
+    color: #111827;
+}
+
+.ward-card p {
+    font-size: 13px;
+    color: #6b7280;
+}
+
+
+/* =========================================================
+   WARD DETAILS
+========================================================= */
+
+.ward-details {
+    display: none;
+
+    position: relative;
+
+    padding: 40px;
+
+    background: white;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 20px;
+
+    box-shadow: 0 12px 35px rgba(0,0,0,0.07);
+}
+
+.ward-details.active {
+    display: block;
+}
+
+.close-btn {
+    position: absolute;
+
+    top: 18px;
+    right: 18px;
+
+    width: 38px;
+    height: 38px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #f3f4f6;
+
+    cursor: pointer;
+
+    font-size: 18px;
+}
+
+.close-btn:hover {
+    background: #e5e7eb;
+}
+
+#wardContent h2 {
+    margin-bottom: 10px;
+    color: #111827;
+}
+
+#wardContent p {
+    color: #6b7280;
+}
+
+
+/* =========================================================
+   REGISTRATION
+========================================================= */
+
+.register-section {
+    padding-top: 20px;
+}
+
+#registrationForm {
+    max-width: 900px;
+
+    margin: auto;
+
+    padding: 35px;
+
+    background: white;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 35px rgba(0,0,0,0.05);
+}
+
+.form-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    color: #374151;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+
+    padding: 13px 14px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 9px;
+
+    background: white;
+
+    color: #111827;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #8b5cf6;
+
+    box-shadow: 0 0 0 3px rgba(139,92,246,0.12);
+}
+
+textarea {
+    resize: vertical;
+}
+
+#formMessage {
+    margin-top: 15px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact-section {
+    padding: 80px 6%;
+
+    background: #111827;
+
+    color: white;
+}
+
+.contact-section .section-heading h2 {
+    color: white;
+}
+
+.contact-section .section-heading p:last-child {
+    color: #d1d5db;
+}
+
+.contact-info {
+    max-width: 1000px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.contact-info > div {
+    padding: 25px;
+
+    border: 1px solid rgba(255,255,255,0.1);
+
+    border-radius: 14px;
+
+    background: rgba(255,255,255,0.04);
+}
+
+.contact-info strong {
+    display: block;
+
+    margin-bottom: 8px;
+}
+
+.contact-info p {
+    color: #d1d5db;
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    padding: 25px 6%;
+
+    text-align: center;
+
+    background: #030712;
+
+    color: #9ca3af;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .ward-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .contact-info {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .header {
+        padding: 14px 5%;
+    }
+
+    .logo h1 {
+        font-size: 15px;
+    }
+
+    .logo p {
+        font-size: 10px;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    nav {
+        display: none;
+
+        position: absolute;
+
+        top: 100%;
+        left: 0;
+        right: 0;
+
+        padding: 20px;
+
+        flex-direction: column;
+        align-items: stretch;
+
+        background: white;
+
+        border-bottom: 1px solid #e5e7eb;
+
+        box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    nav a {
+        padding: 10px 0;
+    }
+
+    .hero {
+        min-height: 540px;
+
+        padding: 60px 5%;
+    }
+
+    .hero h2 {
+        font-size: 43px;
+    }
+
+    .hero p:not(.badge) {
+        font-size: 16px;
+    }
+
+    .stats {
+        width: 90%;
+
+        grid-template-columns: 1fr;
+
+        margin-top: -35px;
+    }
+
+    .stat-card {
+        border-right: none;
+
+        border-bottom: 1px solid #e5e7eb;
+    }
+
+    .stat-card:last-child {
+        border-bottom: none;
+    }
+
+    .ward-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #registrationForm {
+        padding: 24px;
+    }
+
+}
+
+
+@media (max-width: 420px) {
+
+    .ward-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h2 {
+        font-size: 36px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+    }
+
+}
+```
